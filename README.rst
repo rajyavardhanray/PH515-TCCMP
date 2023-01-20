@@ -1,9 +1,13 @@
-Template for the Read the Docs tutorial
+Theoretical and Computational Cond Mat Physics (PH515)
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+A course offered to Semester X Integrated MSc, Semester IV MSc and young graduate (PhD) students at BIT Mesra, Ranchi, India.
 
-Read the tutorial here:
+Course structure and contents
+=======================================
 
-https://docs.readthedocs.io/en/stable/tutorial/
+  can be found at the BIT Mesra website.
+
+Instructor(s)
+=======================================
+  R Ray

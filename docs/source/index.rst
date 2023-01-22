@@ -1,13 +1,17 @@
-Welcome to Lumache's documentation!
+Theoretical and Computational Cond Mat Physics (PH515)
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+A course offered to Semester X Integrated MSc, Semester IV MSc and young graduate (PhD) students at BIT Mesra, Ranchi, India.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Course structure and contents
+===================================
+can be found at the `Department of Physics, BIT Mesra website <https://www.bitmesra.ac.in/UploadedDocuments/adminph/files/2022-10-11_MSc_full.pdf/>`_.
+
+Instructor(s)
+===================================
+ `R Ray <https://www.bitmesra.ac.in/Visit_My_Page?cid=1&deptid=169&i=lh5Vzkvpr01Hwibjtan%2byBApHPvYoN%2blS4hExoUduHo%3d/>`__
+
+
 
 .. note::
 
@@ -18,5 +22,5 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   Model spin Hamiltonians
+   The art of mean mield theory

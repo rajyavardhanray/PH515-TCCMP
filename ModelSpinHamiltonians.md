@@ -35,20 +35,111 @@ In the present convention, $J \ge 0$ would imply that the energy $E = <\mathcal{
 
 Therefore, if the magnitude of the spins are large, the quantum fluctuations are expected to be small. For such cases, the spin operators can be approximated to behave like classical operators --- vectors. Why the classical objects would behave like vectors can be understood by their interaction with the magnetic field (Zeemann coupling),
 
-$$
+
 \begin{equation}
 \mathcal{H}_{\rm Zeeman} = {\bf B}\cdot {\bf S} = \mu {\bf H}\cdot {\bf S}
 \end{equation}
-$$
+
 
 Being vectors, the classical spins can in principle point to any direction in the space (modeled by angles $\theta$ and $\phi$), and therefore, must lie on a sphere of radius $S$. For a detailed discussion on the relation between quantum and classical spins, perhaps it is instructive to learn about the [Bloch sphere](https://en.wikipedia.org/wiki/Bloch_sphere).
 
 As a result, we have:
 
-$$
 \begin{eqnarray}
 S_x &=& S \cos(\phi)\sin(\theta) \,, \nonumber \\
 S_y &=& S \sin(\phi)\sin(\theta) \,, \nonumber \\
 S_z &=& S \cos(\theta)\,. \\
 \end{eqnarray}
-$$
+
+
+#### A1. Quantum limit
+
+It is evident from the above discussion that for $S=1/2$, the classical approximation should fail, or even breakdown. A fundamental difference between the classical and quantum spins is the expection value of $<{\bf S}^2> = S(S+1)$ ($=S^2$) in the quantum (classical) limit.
+
+In general, experience suggests that the classical Heisenberg Hamiltonian captures the essential physics of the underlying spin system for $S \geq 1$. However, this is somewhat sensitive to the dimensionality and coordination number of the system/lattice and also on the nature of the spin interactions. 
+
+
+
+For example, the quantum fluctuations in lower dimensions is larger than in three-dimensions (3D). ${\color{red}{\rm Why?}}$ 
+
+Additionally, if the system is frustrated (see below), then the classical approximation may turn out to be misleading.
+
+
+
+
+#### A2. SO(3) symmetry and spontaneous symmetry breaking
+
+An interesting and important aspect of the Heisenberg Hamiltonian is the fact that the Hamiltonian is rotationally invariant since it involves dot product of spins. This is referred to as the $SO(3)$ symmetry of the Heisenberg Hamiltonian. You have already dealt extensively with the matrix representation of the rotation operators. The only thing to remember here is the the $SO(3)$ deals with orthonormal matrices $M$ (rotations) with ${\rm det}(M) = +1$. ($O(3)$ is the collection of orthonormal matrices in 3D, with ${\rm det}(M) = \pm 1$.)
+
+As such, both $O(3)$ and $SO(3)$ form a continuous group, implying that the result of the operations from the set, even successive, belong to the same set. The term *continuous* refers to the fact that infinitesimal rotations are also well-defined.
+
+**Ferromagnets.** An important application of Heisenberg Hamiltonian is the description of ferromagnets (involving ions with valence $3d$ shells). Given the rotational symmetry of the Hamiltonian, one would expect that all the directions are equally likely. However, a ferromagnets has a particular orientation of spins which manifestly breaks the rotational symmetry of the Hamiltonian. In other words, the ground state wavefunction has a lower symmetry than the Hamiltonian. This is achieved via the mechanism of [spontaneous symmetry breaking](https://en.wikipedia.org/wiki/Spontaneous_symmetry_breaking) (more on this, later!).
+
+### B. Ising model
+
+Perhaps the simplest conceptual Hamiltonian is the Ising spin Hamiltonian:
+\begin{equation}
+\mathcal{H}_{\rm Ising} = -J \sum_{<ij>} S_i^z S_j^z\,,
+\end{equation}
+where $S_i^z = \pm S$ represents the $z$ component of the spins at site i. Note that, in this case, the rotational symmetry is absent in the Hamiltonian. In this case, there exist a natural direction ($z$) for the spin to align. In this sense, these are $S=1/2$ states.
+
+
+### C. Anisotropic exchange models
+
+**XXZ Model.**
+Between the fully rotational symmetric Heisenberg and the symmetry-broken Ising model, one can imagine that there are systems where while the rotational symmetry is broken, all the three ($x,y,z$) components of the spins are still relevant at low energies. Such models are referred to as **anisotropic spin models**. 
+
+One example would the **XXZ model** where the anisotropy is manifested via the exchange couplings:
+
+\begin{equation}
+\mathcal{H}_{\rm XXZ} = J[S_i^x S_j^x + S_i^y S_j^y ] + J' S_i^z S_j^z\,.
+\end{equation}
+
+The above hamiltonian maps to the Heisenberg model for $J'=J$. One could guess that in the limit of $J'/J >> 1$, this would behave more like the Ising model. ${\color{red}{\text{Any guess on how large should $J'/J$ be to reach the Ising limit?}}}$.
+
+$\hspace{0.1cm}$
+
+**XY Model.** Note that in all the cases discussed above, the spin is assumed to live in 3D independent of the dimensionality of the lattice (which could be 1D, 2D or 3D). An example of the 2D spin Hamiltonian is the XY model:
+
+\begin{equation}
+\mathcal{H}_{\rm XY} = J[S_i^x S_j^x + S_i^y S_j^y ]\,.
+\end{equation}
+
+This model shows [Kosterliz-Thouless phase transition](https://www.mit.edu/~levitov/8.334/notes/XYnotes1.pdf), distinct from the other cases. 
+
+
+### Spin frustration -- geometric and quantum/energetic.
+
+Consider a traingular lattice with localized spin $S$ per site. Each site is coordinated with 6 NN sites. To explain the idea of frustration, it would suffice to consider a simpler traingular plaquette. At the same time, lets us consider **antiferromagnetic** Ising exchange interaction between these spins.
+
+![GeometricFrustration]( https://drive.google.com/uc?export=view&id=19l9bf1PmQgaYpt-vIJOiioUOvka8m_x00I6IMgcQ5uQ )
+
+[GeometricFrustration (image)](https://docs.google.com/drawings/d/19l9bf1PmQgaYpt-vIJOiioUOvka8m_x00I6IMgcQ5uQ/edit?usp=sharing)
+
+In this case, if sites/vertex 1 and 2 are up and down (satisfying the minimum energy criteria), spin at the vertex 3 cannot simultaneouly satisfy the AF exchange interaction with sites 1 and 2. This would be an example of **geometric frustration**. It arises due to underlying lattice. 
+
+${\color{red}{\text{In contrast, one could consider a square lattice and explicitly check that no frustration arises in that case.}}}$
+
+Note however, that I creverly (and quite conveniently) chose the exchange interaction to be Ising type. Alternatively, if one chooses Heisenberg spin interactions, the situation turns out to be quite interesting as well. 
+
+Even in this case, the spin cannot be aligned *completely* parallel or antiparallel to each other. However, ${\color{red}{\text{analytical energy minimization principle would lead to a 120$^{\circ}$-AF state as the ground state for classical spins}}}$. (This is what MF also results!)
+
+For the 120-AF state, it is possible to place spins at each vertex unambiguously. This state therefore is not frustrated in the same sense as was the case for Ising spins (**Geometric frustration**). However, note that the energy per bond in this case turns out to be: 
+
+\begin{equation}
+E_{\rm 120-AF} = JS^2 \cos(2\pi/3) = -JS^2/2\,,
+\end{equation}
+
+which is not the minimum possible energy per bond. This would represent the case of **Energetic frustration**, whereby the minimum energy cannot be obtained simultaneously for each bond.
+
+### D. Kitaev exchange Hamiltonian [Extra, for completeness]
+
+At the cross-roads of anisotropy and frustration, lies a very interesting Hamiltonian for $S=1/2$ spins on a honeycomb lattice. Here, the anisotropy is direction dependent. Depending on the bond (coordination number per site is $z=3$), different component of the Ising-like spin interactions exist. This is the celebrated [Kitaev Hamiltonian](https://www.thp.uni-koeln.de/trebst/Lectures/Seminar14/Handout9.pdf) at the forefront of current cond-mat research.
+
+\begin{eqnarray}
+\mathcal{H}_{\rm Kitaev} &=& J_{xx} \sum_{xx-{\rm links}} S_i^{x}S_j^{x} \nonumber \\
+    &+&J_{yy} \sum_{yy-{\rm links}} S_i^{y}S_j^{y} \nonumber \\
+    &+&J_{zz} \sum_{zz-{\rm links}} S_i^{z}S_j^{z} \,.\nonumber
+\end{eqnarray}
+
+Note that the bond-directions are simply labeled as $\mu\mu$-links and need not lie along $x$, $y$ or $z$ directions.

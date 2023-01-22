@@ -23,4 +23,4 @@ Contents
 .. toctree::
 
    Model spin Hamiltonians
-   The art of mean mield theory
+   The art of mean mield analysis

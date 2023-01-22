@@ -174,3 +174,23 @@ $$
 $$
 
 Note that the bond-directions are simply labeled as $\mu\mu$-links and need not lie along $x$, $y$ or $z$ directions.
+
+## II. Model Hamiltonians with spin and charge degrees of freedom.
+
+**$t$-$J$ Model.** A related model Hamiltonian relavant for doped magnets involvolved both spin and charge degrees of freedom. A realistic situation where this model find application is, *e.g.* if there is an electron/hole doped in an antiferromagnet. In such a case, the electron/hole hopps (kinetic energy) in the background of the magnetic arrangement scrambling them as they move.
+
+\begin{equation}
+\mathcal{H}_{j-J} = -t  \sum_{<ij>} [c_i^{\dagger}c_j + H.c] + J_{\rm AF} \sum_{<ij>}{\rm S}_i \cdot {\bf S}_j
+\end{equation}
+
+**Hubbard Model.** The Heisenberg model discussed above can be derived from a more general Hubbard model:
+\begin{equation}
+\mathcal{H}_{\rm Hubbard} = -t  \sum_{<ij>} [c_i^{\dagger}c_j + H.c] + U \sum_{i}{n}_{i\sigma} \cdot {n}_{j\bar{\sigma}}\,
+\end{equation}
+where $U$ is the on-site repulsion term between spin $\sigma$ (and $\bar{\sigma}$); $n$ is the number operator; $n_{\mu}$ is the number operator projected on to the quantum variable $\mu$.
+
+For a detailed discussion, esp. the extreme limits of the Hubbard model, please refer these lecture notes: [from MSU](https://scalettar.physics.ucdavis.edu/michigan/hubbard7.pdf), [by Yepez](https://www.phys.hawaii.edu/~yepez/Spring2013/lectures/Lecture8_Hubbard_Model_Notes.pdf), [by Scalleter](https://www.cond-mat.de/events/correl16/manuscripts/scalettar.pdf).
+
+${\color{red}{\text{Discussion on the extreme limits of Hubbard model}}}$.
+
+${\color{red}{\text{Strong coupling limit expansion based on the second order perturbation theory.}}}$.

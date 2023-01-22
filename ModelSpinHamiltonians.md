@@ -24,11 +24,15 @@ Naturally, we are going to deal with cases where each atom has a partially fille
 
 One of the mostly used Hamiltonian capturing interaction between spins is the Heisenberg Hamiltonian:
 
+$$
 \begin{equation}
-\mathcal{H}_{\rm Heis} = -J \sum_{<ij>} {\bf S}_i \cdot {\bf S}_j\,,
+\mathcal{H}_{\rm Heis} = -J \sum_{\langleij\rangle} {\bf S}_i \cdot {\bf S}_j\,,
 \end{equation}
-where ${\bf S}_i$ represents spins (quantum spin operators to be precise) at site i, and $J$ represents the exchange coupling between the spins at nearest neighbor (NN) sites $i$ and $j$ (denoted by symbol $<ij>$. 
+$$
 
+where ${\bf S}_i$ represents spins (quantum spin operators to be precise) at site i, and $J$ represents the exchange coupling between the spins at nearest neighbor (NN) sites $i$ and $j$ (denoted by symbol $\langle ij\rangle$. 
+
+    
 In the present convention, $J \ge 0$ would imply that the energy $E = <\mathcal{H}_{\rm Heis}>$ will be minimized if the spin ${\bf S}_i$ and ${\bf S}_j$ align parallel to each other. Consequently, $J < 0$, would imply antiparallel spin alignments. These spin arrangements are, respectivey, called the ferromangetic and antiferromagnetic states.
 
 **From quantum to classical spins.**   It turns out that the quantum corrections in the leading order scale $\propto 1/S$ [look up: [large S expansion](http://qpt.physics.harvard.edu/p52.pdf) ]. It is interesting to note that in general, there exists large $N$ expansion as well in both cond-mat and high-energy, where $N$ represents the degree of freedom. Could one similarly carry out a large-dimensional expansion, I wonder $\ldots$]. 
@@ -78,9 +82,13 @@ As such, both $O(3)$ and $SO(3)$ form a continuous group, implying that the resu
 ### B. Ising model
 
 Perhaps the simplest conceptual Hamiltonian is the Ising spin Hamiltonian:
+
+$$
 \begin{equation}
-\mathcal{H}_{\rm Ising} = -J \sum_{<ij>} S_i^z S_j^z\,,
+\mathcal{H}_{\rm Ising} = -J \sum_{\langle ij \rangle} S_i^z S_j^z\,,
 \end{equation}
+$$
+
 where $S_i^z = \pm S$ represents the $z$ component of the spins at site i. Note that, in this case, the rotational symmetry is absent in the Hamiltonian. In this case, there exist a natural direction ($z$) for the spin to align. In this sense, these are $S=1/2$ states.
 
 
@@ -91,19 +99,38 @@ Between the fully rotational symmetric Heisenberg and the symmetry-broken Ising 
 
 One example would the **XXZ model** where the anisotropy is manifested via the exchange couplings:
 
+$$
 \begin{equation}
 \mathcal{H}_{\rm XXZ} = J[S_i^x S_j^x + S_i^y S_j^y ] + J' S_i^z S_j^z\,.
 \end{equation}
+$$
 
 The above hamiltonian maps to the Heisenberg model for $J'=J$. One could guess that in the limit of $J'/J >> 1$, this would behave more like the Ising model. ${\color{red}{\text{Any guess on how large should $J'/J$ be to reach the Ising limit?}}}$.
 
 $\hspace{0.1cm}$
 
+**Heisenberg model with single-ion anisotropy**
+
+$$
+\begin{equation}
+\mathcal{H}_{\rm sia} = - J \sum_{\langle ij \rangle} {\bf S}_i \cdot {\bf S}_j + D\sum_{i} (S_i^z)^2 + E\sum_{i} [(S_i^x)^2 - (S_i^y)^2].
+\end{equation}
+$$
+
+$D$ and $E$ are the single ion anisotropy terms, respectively, favoring out-of-plane (perpendicular, $z$) and in-plane ($x$,$y$) orientation for the spins. Note that the anisotropy terms are on-site terms as would be expected from their origin (single ion anisotropy). 
+
+${\color{red}{\text{It would be an interesting project to highlight the different between the $XXZ$ and the single-ion anisotropy models}}}$
+
+
+$\hspace{0.1cm}$
+
 **XY Model.** Note that in all the cases discussed above, the spin is assumed to live in 3D independent of the dimensionality of the lattice (which could be 1D, 2D or 3D). An example of the 2D spin Hamiltonian is the XY model:
 
+$$
 \begin{equation}
 \mathcal{H}_{\rm XY} = J[S_i^x S_j^x + S_i^y S_j^y ]\,.
 \end{equation}
+$$
 
 This model shows [Kosterliz-Thouless phase transition](https://www.mit.edu/~levitov/8.334/notes/XYnotes1.pdf), distinct from the other cases. 
 

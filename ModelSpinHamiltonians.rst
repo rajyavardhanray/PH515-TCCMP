@@ -1,5 +1,6 @@
 Model Hamiltonians
-=============================
+=======================================
+
 
 We begin our journey with an introduction to model Hamiltonians. You are well aware that, strictly speaking, 
 Hamiltonian represents all the knowledge we have about the system and involves all the degrees of freedom of 

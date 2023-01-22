@@ -8,5 +8,5 @@ Contents
 .. toctree::
 
    README
-   Model Hamiltonians
+   ModelSpinHamiltonians
    
